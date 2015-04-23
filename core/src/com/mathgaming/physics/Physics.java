@@ -34,7 +34,7 @@ public class Physics extends ApplicationAdapter {
 		batch = new SpriteBatch();
 		img = new Texture("spritesheet.png");
 		
-		// Make two slightly vertically-offset sprites (Why?)
+		// Make two slightly vertically-offset sprites
 		sprite = new Sprite(img);
 		sprite.setPosition(-sprite.getWidth()/2, -sprite.getHeight()/2+200);
 		sprite2 = new Sprite(img);
