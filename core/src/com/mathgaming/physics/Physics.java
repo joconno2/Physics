@@ -34,13 +34,13 @@ public class Physics extends ApplicationAdapter {
 		batch = new SpriteBatch();
 		img = new Texture("spritesheet.png");
 		
-		// Make two slightly vertically-offset sprites
+		// Make two slightly offset sprites
 		sprite = new Sprite(img);
 		sprite.setPosition(-sprite.getWidth()/2, -sprite.getHeight()/2+200);
 		sprite2 = new Sprite(img);
 		sprite2.setPosition(-sprite.getWidth()/2+20, -sprite.getHeight()/2+400);
 		
-		world = new World(new Vector2(0, -98f), true);
+		world = new World(new Vector2(0, -50f), true);
 		
 		// Sprite1's Physics body
         BodyDef bodyDef = new BodyDef();
@@ -70,7 +70,7 @@ public class Physics extends ApplicationAdapter {
         FixtureDef fixtureDef = new FixtureDef();
         fixtureDef.shape = shape;
         fixtureDef.density = 0.1f;
-        fixtureDef.restitution = 0.5f;
+        fixtureDef.restitution = 0.9f;
         fixtureDef.filter.categoryBits = PHYSICS_ENTITY;
         fixtureDef.filter.maskBits = WORLD_ENTITY;
 
@@ -79,7 +79,7 @@ public class Physics extends ApplicationAdapter {
         FixtureDef fixtureDef2 = new FixtureDef();
         fixtureDef2.shape = shape;
         fixtureDef2.density = 0.1f;
-        fixtureDef2.restitution = 0.5f;
+        fixtureDef2.restitution = 0.7f;
         fixtureDef2.filter.categoryBits = PHYSICS_ENTITY;
         fixtureDef2.filter.maskBits = WORLD_ENTITY;
 
